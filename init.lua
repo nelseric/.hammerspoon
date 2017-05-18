@@ -24,13 +24,24 @@ hs.hotkey.bind({'cmd'}, 'escape', function()
       }
     },
     {
-      'iTerm2', 'Dev', secondScreen, nil,
+      'iTerm', '. Dev', secondScreen, nil,
       hs.geometry{
         frame.x, frame.y, 962.0, 592.0
+      }
+    },
+    {
+      'OmniFocus', nil, secondScreen, nil,
+      hs.geometry{
+        frame.x, frame.y+frame.h/2,
+        frame.w/2, frame.h/2
       }
     }
   }
   hs.layout.apply(windowLayout, string.match)
+
+  for k,v in pairs(windowLayout) do
+    hs.application.launchOrFocus(v[1])
+  end
 end)
 
 hs.hotkey.bind({'ctrl'}, 'escape', function()
