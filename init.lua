@@ -4,6 +4,7 @@ hs.hotkey.bind({'cmd'}, 'escape', function()
   local laptopScreen = hs.screen.primaryScreen()
   local secondScreen = hs.screen{x=1,y=0} or laptopScreen
   local thirdScreen  = hs.screen{x=2,y=0} or secondScreen
+  local fourthScreen = hs.screen{x=2,y=0} or thirdScreen
 
   local frame = thirdScreen:frame();
 
