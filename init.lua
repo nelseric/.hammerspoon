@@ -5,11 +5,6 @@ hs.hotkey.bind({'ctrl'}, 'escape', function()
   win:setFrame(win:screen():frame(  ))
 end)
 
-hs.hotkey.bind({'ctrl', 'shift'}, '`', function()
-  local win = hs.window.focusedWindow()
-  win:setFullScreen( not win:isFullscreen())
-end)
-
 function reloadConfig(files)
     doReload = false
     for _,file in pairs(files) do
